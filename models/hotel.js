@@ -7,13 +7,10 @@ var Hotel = db.define('hotel', {
 		type: Sequelize.STRING
 	},
 	num_stars: {
-		type: Sequelize.INTEGER,
-		validate: {
-			is: ["^[1-5]$"]
-		}
+		type: Sequelize.FLOAT
 	},
 	amenities: {
-		type: Sequelize.ARRAY(Sequelize.STRING)
+		type: Sequelize.STRING
 	}
 });
 
