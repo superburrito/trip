@@ -4,7 +4,6 @@ body {
 	background-color: #bfb5ad;
 }
 .interface {
-	margin-top: 60px;
 	background-color: #bfb5ad;
 }
 
@@ -18,7 +17,7 @@ body {
 
 
 #map-canvas {
-	height: 50vh;
+	height: 70vh;
 }
 
 select {
@@ -49,7 +48,7 @@ select {
 
 .sidebar-btm {
 	background-color: #eeecea;
-	padding-bottom: 30px;
+	margin-bottom: 0px;
 }
 
 .sidebar-top-bar {
@@ -63,4 +62,10 @@ select {
 .panel-body {
 	padding-top: 20px;
 	padding-bottom: 20px;
+	border-radius: 10px;
+}
+
+.container.interface {
+	padding-top: 50px;
+	width: 100%;
 }

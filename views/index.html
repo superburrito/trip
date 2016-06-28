@@ -3,10 +3,10 @@
 {% block content %}
 
 <div class="container interface">
+<!-- 
+  <div class="row"> -->
 
-  <div class="row">
-
-    <div class="col-lg-8 col-sm-12 map">
+    <div class="col-lg-8 col-sm-12 col-xs-12 map">
       <div id="map-canvas"></div>
       <script>
       var map;
@@ -17,12 +17,9 @@
         });
       }
       </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBgTL5X5SMKm6cOcIwQbUTx1LWOdaCF_0&callback=initMap"
-      async defer>   
-      </script>
     </div> 
 
-    <div class="col-lg-4 col-sm-12 sidebar">
+    <div class="col-lg-4 col-sm-12  col-xs-12 sidebar">
       <div class="row sidebar-top">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -90,24 +87,30 @@
           </div>
           <div class="panel-body">
             <label>My Hotel:</label>
-              <ul>
-              </ul>
+              <div class="item">
+                <span>Fullstack Hotel</span>
+                <button class="btn btn-xs btn-danger remove btn-circle">x</button>
+              </div>
             <br>
 
             <label>My Restaurants:</label>
-              <ul>
-              </ul>
+              <div class="item">
+                <span>Lenwich</span>
+                <button class="btn btn-xs btn-danger remove btn-circle">x</button>
+              </div>
             <br>
             <label>My Activities:</label>
-              <ul>
-              </ul>
+              <div class="item">
+                <span>Get Swoll</span>
+                <button class="btn btn-xs btn-danger remove btn-circle">x</button>
+              </div>
             <br>
           </div>
         </div>
 
     </div>
 
-</div> <!-- closing div row -->
+<!-- </div> closing div row -->
 </div> <!-- closing div container -->
 
 

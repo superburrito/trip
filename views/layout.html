@@ -3,25 +3,29 @@
 	<head>
 		<title>Single Page Trip App</title>
 		<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="planner.css" rel="stylesheet">
-	
+		<link href="/stylesheets/planner.css" rel="stylesheet">	
 	</head>
 	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top clearfix" role="navigation">
-			<div class="container">
-		  	<div class="navbar-header">
-		    	<a class="navbar-brand" href="/">Trip Planner</a>
-		    		</div>
-		       <div>
-		         <ul class="nav navbar-nav navbar-right">
-		           <li><a href="/contact">Home</a></li>
-		           <li><a href="/contact">About</a></li>
-		           <li><a href="/contact">Contact</a></li>		           		
-		         </ul>
-		       </div><!-- /.navbar-collapse -->
-			</div><!-- /.container -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span> 
+		      </button>
+		      <a class="navbar-brand" href="#">Appify</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav">
+		        <li><a href="#">Netherlands</a></li>
+		        <li><a href="#">Singapore</a></li> 
+		        <li><a href="#">Nick and Yao's Story</a></li> 
+		      </ul>
+		    </div>
+		  </div>
 		</nav>
-
 			{% block content %}Welcome to Our App{% endblock %}
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBgTL5X5SMKm6cOcIwQbUTx1LWOdaCF_0&callback=initMap"></script>
 	</body>
 </html>

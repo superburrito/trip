@@ -20,8 +20,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
+
+// Routing Begins
+app.use('/', routes);
+
+
 // Add static access to public stylesheets
-app.use(express.static(path.join(__dirname, 'public/stylesheets')))
+app.use(express.static(path.join(__dirname, '/public')));
 
 // Boilerplate for morgan
 app.use(morgan('dev'));
@@ -37,10 +42,6 @@ swig.setDefaults({cache: false});
 app.listen(3000, function(){
 		console.log('Server is listening on port 3000!');
 });
-
-
-// Routing Begins
-app.use('/', routes);
 
 
 // Default Error Handlers
