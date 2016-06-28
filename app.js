@@ -28,7 +28,7 @@ swig.setDefaults({cache: false});
 
 // Sync-ing database??
 // Server listens on port 5000
-app.listen(5000, function(){
+app.listen(3000, function(){
 		console.log('Server is listening on port 5000!');
 });
 

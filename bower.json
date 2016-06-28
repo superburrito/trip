@@ -1,0 +1,24 @@
+{
+  "name": "trip",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "superburrito <chuayaohui@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/superburrito/trip",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.0.0"
+  },
+  "resolutions": {
+    "jquery": "1.9.1 - 2"
+  }
+}

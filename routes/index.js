@@ -11,6 +11,10 @@ var Restaurant = require('../models/restaurant');
 var Promise = require('bluebird');
 
 
+router.use('/bootstrap', express.static('bootstrap'));
+router.use('/jquery', express.static('../bower_components/jquery'));
+
+
 router.get('/', function(req,res,next){
 	var ActivityProm = Activity.findAll({});
 	var HotelProm = Hotel.findAll({});
