@@ -21,15 +21,16 @@ app.use(bodyParser.json());
 // Boilerplate for morgan
 app.use(morgan('dev'));
 
+// Boilerplate for Swig
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
 app.engine('html', swig.renderFile);
 swig.setDefaults({cache: false});
 
 // Sync-ing database??
-// Server listens on port 5000
+// Server listens on port 
 app.listen(3000, function(){
-		console.log('Server is listening on port 5000!');
+		console.log('Server is listening on port 3000!');
 });
 
 
