@@ -1,10 +1,11 @@
-var Express = require('express');
-var app = new Express();
+var express = require('express');
+var app = express();
 var swig = require('swig');
 var bodyParser = require('body-parser');
 var morgan = require('morgan');
 var routes = require('./routes');
 var Promise = require('bluebird');
+var path = require('path');
 
 // Database
 var db = require('./models/database.js');
@@ -17,6 +18,10 @@ var Activity = require('./models/activity');
 // Boilerplate for bodyParser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+
+// Add static access to public stylesheets
+app.use(express.static(path.join(__dirname, 'public/stylesheets')))
 
 // Boilerplate for morgan
 app.use(morgan('dev'));

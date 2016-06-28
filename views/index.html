@@ -1,44 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Single Page Trip App</title>
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/stylesheets/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <h2>Index Page</h2>
-    <br>
-    <label>Hotel:
-    </label>
-    <select>
-      {% for hotel in templateHotel %}
-      <option value="{{hotel.name}}">
-        {{hotel.name}}
-      </option>
-      {% endfor %}
-    </select>
+{% extends "layout.html" %}
 
-    <label>Restaurant:
-    </label>
-    <select>
-      {% for restaurant in templateRestaurant %}
-      <option value="{{restaurant.name}}">
-        {{restaurant.name}}
-      </option>
-      {% endfor %}
-    </select>
+{% block content %}
 
-    <label>Activity:
-    </label>
-    <select>
-      {% for activity in templateActivity %}
-      <option value="{{activity.name}}">
-        {{activity.name}}
-      </option>
-      {% endfor %}
-    </select>
+<div class="container interface">
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-  </body>
-</html>
+  <div class="row">
+
+    <div class="col-lg-8 col-sm-12 map">
+      <div id="map-canvas"></div>
+      <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map-canvas'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBgTL5X5SMKm6cOcIwQbUTx1LWOdaCF_0&callback=initMap"
+      async defer>   
+      </script>
+    </div> 
+
+    <div class="col-lg-4 col-sm-12 sidebar">
+      <div class="row sidebar-top">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Options</h3>
+          </div>
+          <div class="panel-body">
+            <div class="col-lg-12 sidebar-top-bar">
+              <label>Hotel:
+              </label>
+              <br>
+              <select id="dropdownMenu1">
+                {% for hotel in templateHotel %}
+                <option value="{{hotel.name}}">
+                  {{hotel.name}}
+                </option>
+                {% endfor %}
+              </select>
+              <div class="btn-group" role="group" aria-label="">
+                <button type="button" class="btn btn-default input-sm">Add</button>
+              </div>
+
+            </div>
+
+            <div class="col-lg-12 sidebar-top-bar">
+              <label>Restaurant:
+              </label>
+              <br>
+              <select id="dropdownMenu1">
+                {% for restaurant in templateRestaurant %}
+                <option value="{{restaurant.name}}">
+                  {{restaurant.name}}
+                </option>
+                {% endfor %}
+              </select>
+              <div class="btn-group" role="group" aria-label="">
+                <button type="button" class="btn btn-default input-sm">Add</button>
+              </div>
+
+            </div>
+
+             <div class="col-lg-12 sidebar-top-bar">
+              <label>Activity:
+              </label>
+              <br>
+              <select id="dropdownMenu1">
+                {% for activity in templateActivity %}
+                <option value="{{activity.name}}">
+                  {{activity.name}}
+                </option>
+                {% endfor %}
+              </select>
+              <div class="btn-group" role="group" aria-label="">
+                <button type="button" class="btn btn-default input-sm">Add</button>
+              </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+      <div class="row sidebar-btm">
+      <div class="panel panel-default">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Itinerary</h3>
+          </div>
+          <div class="panel-body">
+            <label>My Hotel:</label>
+              <ul>
+              </ul>
+            <br>
+
+            <label>My Restaurants:</label>
+              <ul>
+              </ul>
+            <br>
+            <label>My Activities:</label>
+              <ul>
+              </ul>
+            <br>
+          </div>
+        </div>
+
+    </div>
+
+</div> <!-- closing div row -->
+</div> <!-- closing div container -->
+
+
+
+{% endblock %}
+
+

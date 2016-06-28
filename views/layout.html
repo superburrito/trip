@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Single Page Trip App</title>
+		<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="planner.css" rel="stylesheet">
+	
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top clearfix" role="navigation">
+			<div class="container">
+		  	<div class="navbar-header">
+		    	<a class="navbar-brand" href="/">Trip Planner</a>
+		    		</div>
+		       <div>
+		         <ul class="nav navbar-nav navbar-right">
+		           <li><a href="/contact">Home</a></li>
+		           <li><a href="/contact">About</a></li>
+		           <li><a href="/contact">Contact</a></li>		           		
+		         </ul>
+		       </div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+
+			{% block content %}Welcome to Our App{% endblock %}
+	</body>
+</html>

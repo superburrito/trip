@@ -1,0 +1,66 @@
+@import "navbar";
+
+body {
+	background-color: #bfb5ad;
+}
+.interface {
+	margin-top: 60px;
+	background-color: #bfb5ad;
+}
+
+.sidebar {
+	padding-top: 0px;
+	float: right;
+	min-height: 100vh;
+	background-color: #eeecea;
+	padding-left: 20px;
+}
+
+
+#map-canvas {
+	height: 50vh;
+}
+
+select {
+	label {
+		color: white;
+	}
+}
+
+.btn-group {
+	.btn.btn-default {
+		background-color: #3b90af;
+		color: white;
+	}
+}
+
+.map {
+	padding-top: 30px;
+	background-color: gray;
+	float: left;
+	min-height: 100vh;
+	min-width: 60vh;
+}
+
+.sidebar-top {
+	background-color: #eeecea;
+	padding-top: 30px;
+}
+
+.sidebar-btm {
+	background-color: #eeecea;
+	padding-bottom: 30px;
+}
+
+.sidebar-top-bar {
+	width: 100%;
+}
+
+select {
+	width: 80%;
+}
+
+.panel-body {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}

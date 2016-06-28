@@ -1,0 +1,56 @@
+$nav-bg: #856f58;
+$nav-txt: #ffffff;
+
+.navbar {
+	 padding: 0 40px;
+	 background-color: $nav-bg;
+	 border: none;
+	 a {
+	   color: $nav-txt;
+	   text-decoration: none;
+	   &:hover {
+	     text-decoration: underline;
+	   }
+	 };
+	 ul {
+	   list-style-type: none;
+	 };
+}
+
+.clearfix:after {
+		 content: "";
+		 display: table;
+		 clear: both;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+}
+
+.navbar-inverse .navbar-brand {
+	color: white;
+}
+
+.navbar-inverse {
+	 background-color: $nav-bg;
+	 a {
+	   color: $nav-txt;
+	 }
+}
+
+.navbar-brand {
+	 float: left;
+	 font-size: 1.2em;
+	 margin-top: 13px;
+}
+
+.navbar-right {
+	float: left !important;
+	margin-top: 13px;
+}
+
+.navbar-fixed-top {
+	 position: fixed;
+	 top: 0;
+	 width: 100%;
+}
